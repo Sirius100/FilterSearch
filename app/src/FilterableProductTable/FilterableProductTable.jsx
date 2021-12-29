@@ -11,6 +11,7 @@ class FilterableProductTable extends React.Component {
   constructor(props) {
   	super(props)
   	this.state = {FilterText: '', InOnlyCheked: false};
+    this.textInput = React.createRef();
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleCheckedChange = this.handleCheckedChange.bind(this)
   }
@@ -31,6 +32,7 @@ class FilterableProductTable extends React.Component {
         <SearchBar
           FilterText={this.state.FilterText}
           InOnlyCheked={this.state.InOnlyCheked}
+          AutoFocus={this.textInput}
           onFilterTextChange={this.handleFilterTextChange}
           onChangeChecked={this.handleCheckedChange}
         />

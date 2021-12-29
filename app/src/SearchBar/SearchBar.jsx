@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-
 
 import styles from './SearchBar.module.css';
 
@@ -8,8 +6,14 @@ import styles from './SearchBar.module.css';
 class SearchBar extends React.Component {
   constructor(props) {
   	super(props)
+
+
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnChecked = this.handleOnChecked.bind(this)
+  }
+
+  componentDidMount(){
+    this.props.AutoFocus.current.focus();
   }
 
   handleOnChange(e) {
@@ -20,11 +24,15 @@ class SearchBar extends React.Component {
     this.props.onChangeChecked(e.target.checked)
   }
 
+
+
   render() {
+    console.log(this.props.AutoFocus.current);
   	return (
   		<div className={styles.SearchBar}>
         <input
           type="text"
+          ref={this.props.AutoFocus}
           value={this.props.FilterText}
           onChange={this.handleOnChange}
         />
@@ -35,6 +43,7 @@ class SearchBar extends React.Component {
         />
   		</div>
   	)
+
   }
 }
 export default SearchBar;

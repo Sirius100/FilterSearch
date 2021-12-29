@@ -6,17 +6,19 @@ import styles from './ProductRow.module.css';
 
 
 class ProductRow extends React.Component {
-  constructor(props) {
-  	super(props)
-  	this.state = {}
-  }
-
 
   render() {
-  	return (
-  		<div className={styles.ProductRow}>
 
-  		</div>
+    const product = this.props.product;
+    const name = product.stocked ?
+    product.name:
+    <span style={{color: "red"}}>{product.name}</span>;
+
+  	return (
+  		<tr className={styles.ProductRow}>
+        <td>{name}</td>
+        <td>{product.price}</td>
+  		</tr>
   	)
   }
 }

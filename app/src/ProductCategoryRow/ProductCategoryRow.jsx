@@ -6,17 +6,16 @@ import styles from './ProductCategoryRow.module.css';
 
 
 class ProductCategoryRow extends React.Component {
-  constructor(props) {
-  	super(props)
-  	this.state = {}
-  }
 
 
   render() {
+    let category = this.props.category;
   	return (
-  		<div className={styles.ProductCategoryRow}>
-
-  		</div>
+      <tr className={styles.ProductCategoryRow} >
+        <th colSpan="2">
+          {category}
+        </th>
+      </tr>
   	)
   }
 }

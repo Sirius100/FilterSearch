@@ -34,7 +34,12 @@ class FilterableProductTable extends React.Component {
           onFilterTextChange={this.handleFilterTextChange}
           onChangeChecked={this.handleCheckedChange}
         />
-        <ProductTable />
+        <ProductTable
+          FilterText={this.state.FilterText}
+          listproduct={this.props.product}
+          InOnlyCheked={this.state.InOnlyCheked}
+        />
+
   		</div>
   	)
   }

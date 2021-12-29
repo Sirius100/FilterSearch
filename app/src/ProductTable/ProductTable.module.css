@@ -1,9 +1,8 @@
 .ProductTable{
-  /* display: */
   border: 1px red solid;
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  width: 280px;
+  width: 290px;
   height: 200px;
 }

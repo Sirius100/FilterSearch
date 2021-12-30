@@ -27,13 +27,12 @@ class SearchBar extends React.Component {
 
 
   render() {
-    console.log(this.props.AutoFocus.current);
   	return (
   		<div className={styles.SearchBar}>
         <input
           type="text"
-          ref={this.props.AutoFocus}
           value={this.props.FilterText}
+          ref={this.props.AutoFocus}
           onChange={this.handleOnChange}
         />
         <input
@@ -42,6 +41,7 @@ class SearchBar extends React.Component {
           onChange={this.handleOnChecked}
         />
   		</div>
+
   	)
 
   }

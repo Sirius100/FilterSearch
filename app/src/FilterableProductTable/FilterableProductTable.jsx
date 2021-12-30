@@ -14,21 +14,22 @@ class FilterableProductTable extends React.Component {
     this.textInput = React.createRef();
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleCheckedChange = this.handleCheckedChange.bind(this)
+
   }
 
   handleFilterTextChange(FilterText)   {
-    console.log('замечено изменение фильтра!');
     this.setState({FilterText: FilterText})
   }
 
   handleCheckedChange(InOnlyCheked){
-    console.log('изменение чекбокса');
     this.setState({InOnlyCheked});
   }
 
   render() {
+
   	return (
-  		<div className={styles.FilterableProductTable}>
+  		<div className={styles.FilterableProductTable} >
+
         <SearchBar
           FilterText={this.state.FilterText}
           InOnlyCheked={this.state.InOnlyCheked}

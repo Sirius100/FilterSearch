@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React, {Suspense} from 'react';
 import ProductTable from '../ProductTable/ProductTable';
-import SearchBar from '../SearchBar/SearchBar';
+// import SearchBar from '../SearchBar/SearchBar';
 
 
 import styles from './FilterableProductTable.module.css';
 
+const SearchBarr = React.lazy( () => import('../SearchBar/SearchBar') )
 
 class FilterableProductTable extends React.Component {
   constructor(props) {
@@ -30,19 +30,20 @@ class FilterableProductTable extends React.Component {
   	return (
   		<div className={styles.FilterableProductTable} >
 
-        <SearchBar
-          FilterText={this.state.FilterText}
-          InOnlyCheked={this.state.InOnlyCheked}
-          AutoFocus={this.textInput}
-          onFilterTextChange={this.handleFilterTextChange}
-          onChangeChecked={this.handleCheckedChange}
-        />
-        <ProductTable
-          FilterText={this.state.FilterText}
-          listproduct={this.props.product}
-          InOnlyCheked={this.state.InOnlyCheked}
-        />
-
+        <Suspense fallback={<div>идет загрузка.....</div>}>
+          <SearchBarr
+            FilterText={this.state.FilterText}
+            InOnlyCheked={this.state.InOnlyCheked}
+            AutoFocus={this.textInput}
+            onFilterTextChange={this.handleFilterTextChange}
+            onChangeChecked={this.handleCheckedChange}
+          />
+          <ProductTable
+            FilterText={this.state.FilterText}
+            listproduct={this.props.product}
+            InOnlyCheked={this.state.InOnlyCheked}
+          />
+        </Suspense>
   		</div>
   	)
   }

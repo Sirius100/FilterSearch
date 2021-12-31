@@ -1,11 +1,12 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, lazy} from 'react';
 import ProductTable from '../ProductTable/ProductTable';
 // import SearchBar from '../SearchBar/SearchBar';
 
 
 import styles from './FilterableProductTable.module.css';
 
-const SearchBarr = React.lazy( () => import('../SearchBar/SearchBar') )
+const SearchBarr = lazy( () => import('../SearchBar/SearchBar') )
+// const SearchBarr = import('../SearchBar/SearchBar')
 
 class FilterableProductTable extends React.Component {
   constructor(props) {

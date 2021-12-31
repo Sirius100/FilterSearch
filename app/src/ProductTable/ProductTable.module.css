@@ -1,8 +1,11 @@
 .ProductTable{
-  border: 1px red solid;
+  /* border: 1px red solid; */
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
   width: 290px;
   height: 200px;
+}
+.ProductTable thead th {
+  height: 30px;
 }

@@ -1,8 +1,15 @@
 .SearchBar{
-  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
   width: 280px;
-  height: 80px;
+  height: 100px;
+}
+.SearchBar input{
+  margin-top: 10px;
+  margin-bottom: auto;
+  margin-left: 5px;
+  margin-right: 5px;
 }

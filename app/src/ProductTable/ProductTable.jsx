@@ -3,7 +3,6 @@ import ProductCategoryRow from '../ProductCategoryRow/ProductCategoryRow';
 import ProductRow from '../ProductRow/ProductRow';
 import styles from './ProductTable.module.css';
 
-// import("../Console/messeng.js").then( data => console.log(data.now()))
 
 
 

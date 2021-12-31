@@ -29,21 +29,26 @@ export default class SearchBar extends React.Component {
   render() {
   	return (
   		<div className={styles.SearchBar}>
-        <input
-          type="text"
-          value={this.props.FilterText}
-          ref={this.props.AutoFocus}
-          onChange={this.handleOnChange}
-        />
-        <input
-          type="checkbox"
-          checked={this.props.InOnlyCheked}
-          onChange={this.handleOnChecked}
-        />
+        <label for="searchItem">Enter name item:</label>
+        <br/>
+        <div>
+          <input
+            type="text"
+            id="searchItem"
+            value={this.props.FilterText}
+            ref={this.props.AutoFocus}
+            onChange={this.handleOnChange}
+          />
+          <input
+            type="checkbox"
+            checked={this.props.InOnlyCheked}
+            onChange={this.handleOnChecked}
+          />
+        </div>
   		</div>
 
   	)
 
   }
 }
-// export SearchBar;
+// EDA9B1

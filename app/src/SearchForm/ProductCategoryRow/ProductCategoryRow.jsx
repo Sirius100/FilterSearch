@@ -11,7 +11,7 @@ class ProductCategoryRow extends React.Component {
     let category = this.props.category;
   	return (
       <tr className={styles.ProductCategoryRow} >
-        <th colSpan="2">
+        <th style={{textAlign:"center"}} colSpan="2">
           {category}
         </th>
       </tr>

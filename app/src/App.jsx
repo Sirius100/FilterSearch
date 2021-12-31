@@ -1,5 +1,5 @@
 import './App.css';
-import {FilterableProductTable, PRODUCTS} from './FilterableProductTable/FilterableProductTable';
+import {FilterableProductTable, PRODUCTS} from './SearchForm/FilterableProductTable/FilterableProductTable';
 
 import React from 'react';
 
@@ -10,7 +10,6 @@ class App extends React.Component {
   		<div className="App">
         <FilterableProductTable
           product={PRODUCTS}
-
         />
   		</div>
   	)

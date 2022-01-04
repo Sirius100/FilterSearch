@@ -1,25 +1,30 @@
 import React from 'react';
-import Button from '../Button/Button';
-//import ReactDom from 'react-dom';
 
 
 import styles from './Container.module.css';
+import {MyContext}  from '../GlobalWrapper/GlobalWrapper';
+import Subcontaiber from '../Subcontainer/Subcontaiber';
 
 
 class Container extends React.Component {
-  constructor(props) {
-  	super(props)
-  	this.state = {}
-  }
 
 
   render() {
   	return (
-  		<div className={styles.Container}>
 
-        <Button />
 
-  		</div>
+        <MyContext.Consumer>
+
+          {( caption ) => (
+
+            <div className={styles.Container}>
+              <Subcontaiber />
+              <button > {caption.caption1} </button>
+              <button > {caption.caption2} </button>
+            </div>
+            )}
+
+        </MyContext.Consumer>
   	)
   }
 }

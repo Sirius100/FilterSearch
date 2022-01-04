@@ -16,7 +16,6 @@ class Button extends React.Component {
   	return (
   		<button className={styles.Button}>
 
-        Not Work
 
   		</button>
   	)

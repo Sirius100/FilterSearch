@@ -29,13 +29,12 @@ export default class SearchBar extends React.Component {
   render() {
   	return (
   		<div className={styles.SearchBar}>
-        <label for="searchItem">Enter name item:</label>
-        <br/>
         <div>
           <input
             type="text"
             id="searchItem"
             value={this.props.FilterText}
+            placeholder="Enter name item"
             ref={this.props.AutoFocus}
             onChange={this.handleOnChange}
           />

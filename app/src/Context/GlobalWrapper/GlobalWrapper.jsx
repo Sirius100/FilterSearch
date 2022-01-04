@@ -1,26 +1,32 @@
 import React from 'react';
 import Wrapper from '../Wrapper/Wrapper';
-//import ReactDom from 'react-dom';
 
 
 import styles from './GlobalWrapper.module.css';
 
+const MyContext = React.createContext()
 
-class GlobalWrapper extends React.Component {
-  constructor(props) {
-  	super(props)
-  	this.state = {}
-  }
+export default class GlobalWrapper extends React.Component {
 
+	render() {
+		const caption = {
+			caption1: "Left Click me!",
+			caption2:  "Right Click me!",
+			caption3: "Center Click me!",
+		}
 
-  render() {
-  	return (
-  		<div className={styles.GlobalWrapper}>
+		return (
 
-        <Wrapper />
+			<MyContext.Provider value={caption}>
+				<div className={styles.GlobalWrapper}>
 
-  		</div>
-  	)
-  }
+					<Wrapper />
+
+				</div>
+		</MyContext.Provider>
+		)
+
+	}
 }
-export default GlobalWrapper;
+
+export {MyContext};

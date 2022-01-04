@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Subcontaiber.module.css';
+import styles from './UpSubcontaiber.module.css';
 import {MyContext}  from '../GlobalWrapper/GlobalWrapper';
 
 class Subcontaiber extends React.Component {
@@ -9,10 +9,10 @@ class Subcontaiber extends React.Component {
   	return (
 
       <MyContext.Consumer>
-        {( caption ) => (
+        {( {caption, reset} ) => (
 
           <div className={styles.Subcontaiber}>
-              <button> {caption.caption3} </button>
+              <button onClick={reset} > {caption.caption3} </button>
           </div>
         )}
       </MyContext.Consumer>

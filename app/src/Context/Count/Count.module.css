@@ -1,0 +1,23 @@
+.Count{
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+
+  bottom: 15px;
+  background-color: purple;
+  width: 85%;
+  height: 35%;
+}
+
+.Count button{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.Count div{
+  display: flex;
+  align-items: center;
+  color: lime;
+}

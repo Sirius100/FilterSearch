@@ -1,0 +1,18 @@
+.Children{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  color: lime;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+.Children button{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

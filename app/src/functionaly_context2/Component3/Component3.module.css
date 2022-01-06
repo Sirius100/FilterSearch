@@ -1,0 +1,21 @@
+.Component3{
+  width: 90%;
+  color: aqua;
+  font-size: 15px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-left: 25px;
+  border-radius: 5rem;
+  background-color: #ED3CCA;
+}
+.Component3 h4{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.Component3 span{
+  font-size: 20px !important;
+  color: green !important;
+  margin-bottom: -15px;
+}

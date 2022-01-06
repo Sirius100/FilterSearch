@@ -1,0 +1,15 @@
+.Component1{
+  width: 500px;
+  min-height:300px;
+  border-color: limegreen;
+  border-radius: 5em;
+  border: 1px solid blue;
+  box-shadow: 2px 2px 3px rgb(83, 80, 80);
+}
+
+.Component1 span{
+  color: red;
+  margin-top: 5px;
+  font-size: 25px;
+  margin-right: auto;
+}

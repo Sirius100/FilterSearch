@@ -12,14 +12,14 @@ class MapInfo extends React.Component {
   	return (
   		<div className={styles.MapInfo}>
         <span>Схема компонента</span>
-        <ol>
-          <li style={{color: "bisque", 'font-size': "20px",'font-weight': "900"}}>GlobalWrapper</li>
+        <ol >
+          <li style={{color: "bisque", fontSize: "20px",fontWeight: "900"}}>GlobalWrapper</li>
           <hr />
-          <ul>
+          <ul style={{listStyle: "none"}}>
             <li style={{ color: "darkcyan", }}>Wrapper</li>
-            <ul style={{'font-size': "20px",'font-weight': "700" }}>
+            <ul style={{fontSize: "20px",fontWeight: "700" ,listStyle: "none"}}>
               <li style={{color:"rgb(94, 184, 21)"}}>Container</li>
-              <ol style={{'font-size': "15px",'font-weight': "500" }}>
+              <ol style={{fontSize: "15px",fontWeight: "500" }}>
                 <li style={{color: "blue"}}>UpSubcontainer</li>
                 <li style={{color: "white"}}>Button * 2</li>
                 <li style={{color: "purple"}}>Count</li>

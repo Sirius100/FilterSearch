@@ -1,0 +1,25 @@
+.Component3{
+
+  width: 90%;
+  margin: 10px auto;
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  border: 1px solid #DD80CC;
+  border-radius: 5rem;
+  background-color: #7FFFD4;
+
+}
+
+.Component3 span{
+  font-size: 20px !important;
+  color: green !important;
+  margin-bottom: -15px;
+  margin-left: 10px;
+}
+.Component3 input{
+  height: 10px;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 3px rgb(83, 80, 80);
+}

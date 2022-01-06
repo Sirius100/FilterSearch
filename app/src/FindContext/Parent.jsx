@@ -1,7 +1,9 @@
 import React from 'react';
 import Children from './Children'
+import Children2 from './Children2'
 
 import styles from './Parent.module.css';
+import ThemeButton from './ThemeButton';
 
 
 const DataContext = React.createContext();
@@ -31,11 +33,17 @@ class Parent extends React.Component {
       <DataContext.Provider value={this.state} >
         <div className={styles.Parent}>
           <Children/>
+
+          {/* <ThemeButton>
+            Change theme
+          </ThemeButton> */}
+
   		  </div>
       </DataContext.Provider>
 
   	)
   }
 }
+// Parent.contentType = DataContext;
 export default Parent;
 export {DataContext};

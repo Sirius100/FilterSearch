@@ -3,8 +3,11 @@ import './App2.css';
 import React from 'react';
 import {GlobalWrapper} from './Context/GlobalWrapper/GlobalWrapper';
 import MapInfo from './Context/MapInfo/MapInfo';
-// import { Parent } from './functionaly_context/Parent';
+import { Component1 } from './functionaly_context1/Component1/Component1';
+import { Component1 as Component1a } from './functionaly_context2/Component1/Component1';
+import { Component1 as Component1b } from './functionaly_context3/Component1/Component1';
 // import Parent from './FindContext/Parent';
+// import App3 from './FindContext/App3';
 
 
 class App2 extends React.Component {
@@ -22,6 +25,17 @@ class App2 extends React.Component {
 					<MapInfo/>
         </section>
 
+				<section>
+					<Component1	/>
+				</section>
+
+				<section>
+					<Component1a	/>
+				</section>
+
+				<section>
+					<Component1b	/>
+				</section>
   		</div>
   	)
   }

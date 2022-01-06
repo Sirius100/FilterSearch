@@ -1,6 +1,8 @@
 .Component1{
   width: 500px;
   min-height:300px;
+  color: #755D9A;
+  font-size: 23px;
   border-color: limegreen;
   border-radius: 5em;
   border: 1px solid blue;
@@ -8,8 +10,6 @@
 }
 
 .Component1 span{
-  color: red;
-  margin-top: 5px;
-  font-size: 25px;
+  margin-top: 10px;
   margin-right: auto;
 }

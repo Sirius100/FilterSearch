@@ -9,7 +9,7 @@ class Component1 extends React.Component {
   constructor(props) {
   	super(props)
   	this.state = {
-      data: 'текст от Component1',
+      data: '^_/\\_^',
       OnChange: this.handleOnChange,  }
 
     this.handleOnChange = this.handleOnChange.bind(this)
@@ -26,7 +26,7 @@ class Component1 extends React.Component {
         <div className={styles.Component1}>
           Subchild to Parent to Subchild
           <br />
-          <i>тут вывод имени: </i> <b>{this.state.data}</b>
+          <span>тут вывод имени: </span> <i>{this.state.data}</i>
           <Component2 />
         </div>
       </ContextFrom_1To3.Provider>

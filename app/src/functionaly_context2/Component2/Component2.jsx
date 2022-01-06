@@ -10,7 +10,7 @@ export function Component2({onChange}) {
 
     <div className={styles.Component2}>
 
-      <span>Component2 child</span>
+      <span> Child </span>
       <input type="text"
         className={styles.Component2}
         placeholder='Введите текст'

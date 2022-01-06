@@ -15,8 +15,8 @@ class Component3 extends React.Component {
         {({data, OnChange}) => (
 
         <div className={styles.Component3}>
-        <span>Component3 child</span> &nbsp;
-        <i>Получаю данные от Component1</i>&nbsp;<b>{data}</b>
+        <span> Child </span> &nbsp;
+        <i>Получаю данные:</i>&nbsp;<b>{data}</b>
         <br />
         <input type="text"
           className={styles.Component3}

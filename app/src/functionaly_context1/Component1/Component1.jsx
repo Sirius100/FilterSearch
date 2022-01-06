@@ -9,7 +9,7 @@ import styles from './Component1.module.css';
 
 // child to child
 export function Component1() {
-  const [name, setState] = useState('')
+  const [word, setState] = useState('')
 
   const handleOnChange = (event) => {
     setState(event.target.value)
@@ -17,10 +17,10 @@ export function Component1() {
 
   return (
     <div className={styles.Companent1}>
-      <span>Child to Child </span>
+      <span> Child to Child </span>
       <br />
       <Component2 onChange={handleOnChange}/>
-      <Component3 name={name} />
+      <Component3 word={word} />
     </div>
 
   )

@@ -1,13 +1,27 @@
 import React from 'react';
 
-import styles from './AppX.module.css';
+import styles from './AppX.css';
+import { Button } from './ErrorBoundary/Button/Button';
+import ErrorComponent from './ErrorBoundary/ErrorComponent/ErrorComponent';
 
 
-export function App3() {
+export default function App3() {
+
   return(
-    <section>
+    <div className='App3'>
+
+      <section>
       <h3>Изучаю ErrorBoundary</h3>
-    </section>
+      <ErrorComponent>
+        <Button>
+          Click Me!
+        </Button>
+      </ErrorComponent>
+
+      </section>
+
+    </div>
+
 
   )
 }

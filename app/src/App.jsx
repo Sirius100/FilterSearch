@@ -1,4 +1,4 @@
-import './App.css';
+import './AppX.css';
 import {FilterableProductTable, PRODUCTS} from './SearchForm/FilterableProductTable/FilterableProductTable';
 
 import React from 'react';

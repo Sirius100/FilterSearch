@@ -1,19 +1,15 @@
 .Component1{
   width: 500px;
   min-height:300px;
-  color: #755D9A;
-  font-size: 23px;
   border-color: limegreen;
-  border-radius: 5rem;
+  border-radius: 5em;
   border: 1px solid blue;
   box-shadow: 2px 2px 3px rgb(83, 80, 80);
 }
 
 .Component1 span{
-  margin-top: 10px;
+  color: #755D9A;
+  margin-top: 5px;
+  font-size: 25px;
   margin-right: auto;
-}
-.Component1 i{
-  font-size: 15px;
-  color: rgb(50, 24, 192);
 }

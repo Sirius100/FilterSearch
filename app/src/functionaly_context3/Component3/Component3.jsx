@@ -16,7 +16,7 @@ class Component3 extends React.Component {
 
         <div className={styles.Component3}>
         <span> Child </span> &nbsp;
-        <i>Получаю данные:</i>&nbsp;<b>{data}</b>
+        <span>Получаю данные:</span>&nbsp;<i>{data}</i>
         <br />
         <input type="text"
           className={styles.Component3}

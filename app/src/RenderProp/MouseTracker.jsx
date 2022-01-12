@@ -1,47 +1,29 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useCallback, useRef} from 'react';
 
 
 
 import styles from './MouseTracker.module.css';
 
 
-// export function MouseTracker() {
-
-//   const [y, setY] = useState(0);
-//   const [x, setX] = useState(0);
-
-//   const handleMouseMove = (event) => {
-//     setX(event.clientX);
-//     setY(event.clientY);
-//   }
-//   return (
-
-//     <div onMouseMove={handleMouseMove} className={styles.Mouse}>
-//       <p>{x}:{y}</p>
-//     </div>
-
-//   )
-// }
-
-
 export function Mouse(props) {
 
   const [state, setState] = useState({ x: 0, y: 0 });
+  const ref = useRef();
 
-  const handleMouseMove = (event) => {
+  const handleMouseMove = useCallback ((event) => {
+    const rect = ref.current.getBoundingClientRect()
     setState({
-      x: event.clientX,
-      y: event.clientY
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top
     });
-  }
+  }, [ref])
 
     return (
-      <div className={styles.Mouse} onMouseMove={handleMouseMove}>
+      <div ref={ref} onMouseMove={handleMouseMove}>
 
-        <p>Текущее положение курсора мыши: ({state.x}, {state.y})</p>
-        {props.render(state)}
-        {/* <Cat mouse={state}/> */}
+        {props.children(state)}
+
       </div>
     );
 }
@@ -49,7 +31,6 @@ export function Mouse(props) {
 function Cat(props) {
 
     const mouse = props.mouse;
-    console.log(mouse);
     return (
       <>
         <div style={{ width:"50px", height: "50px", backgroundColor:"green",position: 'absolute', left: mouse.x, top: mouse.y }} />
@@ -58,14 +39,19 @@ function Cat(props) {
     );
 }
 
-export const MouseWrapper = ()  => {
+
+
+export const Card = ()  => {
 
   return (
-    <>
-      <h1>Перемещайте курсор мыши!</h1>
-      <Mouse render={ (mouse) =>
-      (<Cat mouse={mouse}/>  )}/>
-    </>
 
+    <Mouse>
+      {(mouse) => (
+      <div mouse={mouse} style={{ width: "100%", height:"100px", border:"1px solid black", backgroundColor: "hsla(18, 100%, 55%, 1)" }} >
+        ({mouse.x} : {mouse.y})
+      </div>
+    )}
+    </Mouse>
   )
+
 }

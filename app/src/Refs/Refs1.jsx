@@ -32,10 +32,6 @@ export const MyInput = forwardRef( (props, ref ) => {
   const [state, setState] = useState(false)
   const name = props.name;
 
-  // const handlerClickBtn = (event) => {
-  //   console.log(event.target.ref);
-  //   setState(!state)
-  // }
   const handlerClickMyInput = () => {
     console.log("на мне кликнули!");
     (props.func) ? props.func() : console.log("нет такого функционала");
@@ -45,7 +41,6 @@ export const MyInput = forwardRef( (props, ref ) => {
   useEffect(() => {
     // handlerClickMyInput();
   })
-
 
   return (
 

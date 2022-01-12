@@ -9,7 +9,6 @@ class ErrorComponent extends React.Component {
       error: null,
     }
   }
-
   static getDerivedStateFromError() {
 
   }

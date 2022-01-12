@@ -10,7 +10,7 @@ export function Button(props) {
   const [state, setState] = useState(0);
 
 
-    console.log(state);
+    // console.log(state);
     if(state === 3)  throw Error('Превышено количество попыток!')
 
 

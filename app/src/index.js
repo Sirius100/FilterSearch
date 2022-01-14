@@ -20,7 +20,7 @@ ReactDOM.render(
 );
 ReactDOM.render(
   <React.StrictMode>
-    <App3 />
+    {/* <App3 /> */}
   </React.StrictMode>,
   document.getElementById('root2')
 );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { MouseWrapper, Card } from './RenderProp/MouseTracker';
-
+import { Card, Xyz, MyXyzTransition } from './RenderProp/MouseTracker';
 
 
 
@@ -14,6 +13,11 @@ export default function App4() {
       <Card/>
       <Card/>
       <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Xyz/>
+      <MyXyzTransition/>
     </>
 
   )
